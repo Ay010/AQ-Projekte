@@ -1,0 +1,136 @@
+/*
+
+
+basis   */
+* {
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  padding: 1rem 5%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  transition: 0.3s text-shadow;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 0.8em 1em;
+  margin: 0em 1em;
+}
+
+/* body content */
+
+/* nav */
+nav {
+  padding: 1em;
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+nav ul {
+  display: flex;
+  margin-left: auto;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0.5em;
+  padding: 0.5em;
+  transition: 0.5s background-color;
+}
+
+nav ul li:hover {
+  background-color: rgb(223, 223, 223);
+  color: rgb(0, 0, 0);
+}
+
+/* header */
+header h1 {
+  font-size: 3em;
+}
+
+header p {
+  font-size: 2em;
+}
+
+header {
+  background-image: /* linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+        ), */ url(/Bilder/Sonne.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 32cqmax;
+  color: white;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+/* footer */
+
+/* media screen */
+@media screen and (max-width: 500px) {
+  header {
+    height: 20rem;
+    background-size: cover;
+    /* background-image: linear-gradient(
+        to right,
+        rgb(49, 49, 49),
+        rgb(66, 66, 66)
+      ); */
+  }
+  nav {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  nav ul {
+    padding: 0;
+    margin-left: 0.1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.5rem;
+  }
+}
