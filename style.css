@@ -84,6 +84,32 @@ nav ul li:hover {
   scroll-behavior: smooth;
 }
 
+/* nav button */
+#nav-button {
+  display: none;
+  margin-left: auto;
+  width: 50%;
+  height: 45px;
+  font-size: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgb(54, 54, 54);
+  color: white;
+  transition: 0.2s;
+}
+
+#nav-button:hover {
+  background-color: rgb(102, 102, 102);
+  box-shadow: 0 0 10px inset rgb(31, 31, 31);
+}
+
+.show {
+  background-color: blue;
+  display: block;
+  top: 30;
+  max-height: 100%;
+}
+
 /* 
 
 header */
@@ -147,6 +173,7 @@ main section {
 #skills {
   display: inline-block;
   width: 100%;
+  user-select: none;
 }
 
 /* 
@@ -221,8 +248,12 @@ media screen 1 */
   }
 }
 
-/* @media screen and (max-width: 430px) {
+@media screen and (max-width: 430px) {
   #navi {
     display: none;
   }
-} */
+
+  #nav-button {
+    display: block;
+  }
+}
