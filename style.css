@@ -45,6 +45,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: white;
+  border-bottom: 3px solid rgb(190, 190, 190);
 }
 
 nav ul {
@@ -82,6 +83,14 @@ nav ul li:hover {
   color: black;
   text-decoration: none;
   scroll-behavior: smooth;
+}
+
+#menü {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
 
 /* 
@@ -147,6 +156,7 @@ main section {
 #skills {
   display: inline-block;
   width: 100%;
+  user-select: none;
 }
 
 /* 
@@ -221,8 +231,40 @@ media screen 1 */
   }
 }
 
-/* @media screen and (max-width: 430px) {
-  #navi {
+@media screen and (max-width: 430px) {
+  #menü {
+    transition: 0.5s;
+    padding: 10px 40px;
+    display: block;
+  }
+
+  #menü:hover {
+    background-color: rgb(223, 223, 223);
+  }
+  nav p,
+  nav ul {
     display: none;
   }
-} */
+
+  nav ul {
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
+
+  nav ul li,
+  #navel {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  nav,
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #secOne p {
+    font-size: 1.1em;
+  }
+}
