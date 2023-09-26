@@ -10,3 +10,15 @@ menü.addEventListener('click', () => {
 
 })
 
+navul.addEventListener('click', () => {
+    navul.classList.toggle('show')
+    navel.classList.toggle('show')
+
+})
+
+navel.addEventListener('click', () => {
+    navul.classList.toggle('show')
+    navel.classList.toggle('show')
+
+})
+
