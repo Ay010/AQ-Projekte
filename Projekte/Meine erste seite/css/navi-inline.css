@@ -1,0 +1,36 @@
+@media screen {
+
+    /* Provisorische Gestaltung der Navigation und der Fußzeile */
+
+  .site-nav-list {
+    background-color: #333;
+    padding: 0.5em;
+  }
+
+  .site-nav-list li {
+    margin-right: 0.9em;
+    display: inline;
+  }
+
+  .site-nav-list a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .awele {
+    color:darkblue;
+  }
+
+  /* Kontaktieren */
+
+  a.sie-sind-hier {
+    text-decoration: underline;
+  }
+  
+  .menübutton {
+    display: none;
+  }
+  
+  
+  
+} /* Ende @media */

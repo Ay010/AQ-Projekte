@@ -1,0 +1,179 @@
+@media screen {
+
+
+  /* Ellemente visoel vertecken, aber vür Screendreder zugänglich lassen  */
+
+  .verstecke-text {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+
+  /* vermeidung von marging blabla */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol.ul,
+  blockquote {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+
+
+  /* borde box */
+
+  html {
+    box-sizing: border-box;
+    overflow-y: scroll;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+
+  header,
+  nav,
+  main,
+  footer,
+  section,
+  article,
+  aside,
+  figcaption,
+  figure {
+    display: block;
+  }
+
+
+  /* Überschriften */
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+
+
+  /* Umgebende Elemente sollen gefloatete Elemente umschließen */
+
+  .clear-overflow {
+    overflow: hidden;
+  }
+
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .clear-flow-root {
+    display: flow-root;
+  }
+
+  /* Element soll unterhalb gefloateten Elemente bleiben */
+
+  .clear-both {
+    clear: both
+  }
+
+
+
+
+  /* text schrift */
+
+  body {
+    font-family: sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 1rem;
+  }
+
+
+
+  /* Grunlegende Gestaltung Adresse*/
+
+  adress {
+    font-style: normal;
+  }
+
+
+  /* figure ohne margin und Bildbeschriftung gestalten */
+
+  .figure {
+    padding: 0;
+    margin: 0;
+  }
+
+  .figcaption {
+    text-align: center;
+    font-size: 80%;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  /* Blider Floaten */
+
+  .bildrechts {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .bildlinks {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* span für CSS,Javascript und HTML */
+
+  .HTML {
+    color: darkgoldenrod;
+  }
+
+  .CSS {
+    color: darkgoldenrod;
+  }
+
+  .Javascript {
+    color: darkgoldenrod;
+  }
+
+
+}
+
+/* Ende @media */

@@ -1,0 +1,59 @@
+@media screen {
+  
+  
+  
+  /* Klassisches Layaut mit begrenzter Breite */
+  
+  
+  
+  html {
+	background-image: url(bilder-css/see.png);
+	background-attachment: fixed;
+}
+  
+  body {
+	min-width: 320px;
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: white;
+}
+  
+  
+  
+  /* Kopfbereich */
+  
+  
+   .site-header {
+	padding: 1rem 1rem 0 1rem;
+}
+  
+  /* Apschdände logo und slogen anpassen */
+  
+  
+  .site-logo {
+    margin-bottom: 0 ;
+  }
+  
+  .site-footer {
+    font-size: small;
+}
+
+.site-content {
+	line-height: 1.5;
+	padding: 1rem;
+}
+  
+.site-footer {
+	background-color: #333;
+	padding: 1rem;
+	margin-top: 2rem;
+}
+  
+
+.site-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+  
+} /* Ende @media */

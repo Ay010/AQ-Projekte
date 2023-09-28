@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  <!-- Die Seite ist von Ayyub -->
+
+  <head>
+    <meta charset="utf-8" />
+    <title>News Seite</title>
+    <meta name="description" content="Das ist meine erste Seite." />
+
+    <meta
+      name="viewport"
+      content="width-device-width, initial-scale-1.0, sheink-to-fit-no"
+    />
+    <script
+      src="https://kit.fontawesome.com/675c014b5c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body class="news">
+    <header class="site-header">
+      <div class="wrapper">
+        <h1 class="site-logo">
+          <img
+            src="bilder/logo-html+css-222.gif"
+            scrset="bilder/logo-html+css-444.gif 2x,
+                          bilder/logo-html+css-444.gif 3x"
+            alt="HTML + CSS"
+            width="222"
+            height="33"
+          />
+        </h1>
+
+        <p class="site-slogan">Webseiten erstellen und gestalten.</p>
+      </div>
+    </header>
+
+    <nav class="site-nav">
+      <div class="wrapper">
+        <button class="menübutton" onclick="this.classList.toggle('show-menü')">
+          <i class="fas fa-bars"></i>&nbsp;Menü
+        </button>
+
+        <ul class="site-nav-list">
+          <li><a href="Startseite.html">Startseite</a></li>
+          <li><a href="news.html" class="sie-sind-hier">News</a></li>
+          <li><a href="%C3%BCber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="site-content">
+      <div class="wrapper">
+        <section class="section-wilkommen">
+          <h2>News</h2>
+
+          <p>
+            Neues aus der Weltgeschichte. Hier im Blog veröffentlichen wir in
+            unregelmäßigen Abständen immer mal wider neue Beiträge, die sie
+            hoffentlich interessant finden.
+          </p>
+        </section>
+
+        <section class="beitragsliste">
+          <h2 class="verstecke-text">Beiträge</h2>
+
+          <article>
+            <header>
+              <h3>Webstandards</h3>
+
+              <p class="beitragsinfo">
+                <span class="autor">Anonymous</span> |
+                <time datetime="2018-03-25">20. Mai 2018</time>
+              </p>
+            </header>
+
+            <p>
+              Ich bin zwar nur ein Fülltext, aber wenn Sie nun schon die Güte
+              haben, mich ein paar weitere Sätze lang zu begleiten, möchte ich
+              diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu
+              dienen, sondern auf etwas hinzuweisen, das es ebenso verdient
+              wahrgenommen zu werden: Webstandards nämlich.
+            </p>
+
+            <p>
+              <a href="#" class="read-more-link">Weiterlesen...</a>
+            </p>
+          </article>
+
+          <article>
+            <header>
+              <h3>Hinter den Wortbergen</h3>
+
+              <p class="beitragsinfo">
+                <span class="autor">Anonymous</span> |
+                <time datetime="2016-03">März 2016</time>
+              </p>
+            </header>
+
+            <p>
+              Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und
+              Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in
+              Buchstabhausen an der Küste des Semantik, eines großen
+              Sprachozeans.
+            </p>
+
+            <p>
+              <a href="#" class="read-more-link">Weiterlesen...</a>
+            </p>
+          </article>
+
+          <article>
+            <header>
+              <h3>Bla Bla Bla</h3>
+              <p class="beitragsinfo">
+                <span class="autor">Anonymous</span> |
+                <time datetime="1774-09-29">29. September 1774</time>
+              </p>
+            </header>
+
+            <p>
+              Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen,
+              gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen
+              genieße. Ich bin allein und freue mich meines Lebens in dieser
+              Gegend, die für solche Seelen geschaffen ist wie die meine.
+            </p>
+
+            <p>
+              <a href="#" class="read-more-link">Weiterlesen...</a>
+            </p>
+          </article>
+        </section>
+
+        <aside class="linklisten">
+          <h2 class="verstecke-text">Linklisten</h2>
+
+          <section class="tools">
+            <h3>Tools</h3>
+
+            <ul>
+              <li>
+                <a href="#" target="_blank">Brackets</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">Blindtextgenerator</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">HTML-Validator</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="referenzen">
+            <h3>Referenzen</h3>
+
+            <ul>
+              <li>
+                <a href="#" target="_blank">HTML-Elemente</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">HTML-Attribute</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">Farbnamen</a>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <nav class="meta-nav">
+          <ul class="meta-nav-list">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#top" id="top">Nach oben</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
