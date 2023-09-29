@@ -86,15 +86,22 @@ nav ul a:hover {
 /* Kontakt Element */
 #navel {
   margin-left: auto;
-  padding: 0.5em;
   margin: auto 1em auto auto;
   transition: 0.5s background-color;
-  font-size: 16px;
+  cursor: pointer;
+  padding: 0.5em;
 }
 
 #navel:hover {
   background-color: rgb(223, 223, 223);
   color: rgb(0, 0, 0);
+}
+
+#navel p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s background-color;
 }
 
 .nava {
@@ -107,7 +114,7 @@ nav ul a:hover {
 }
 
 .show {
-  display: flex;
+  display: flex !important;
 }
 
 /* 
@@ -214,10 +221,17 @@ main section {
 
 #projekt-ul div h3 {
   font-size: 25px;
+  text-decoration: underline;
+  transition: 0.3s color;
+}
+
+#projekt-ul div h3:hover {
+  color: rgb(94, 94, 94);
 }
 
 #projekt-ul > div > p {
   font-size: 20px;
+  user-select: none;
 }
 
 #projekt-ul div p img {
@@ -360,7 +374,7 @@ media screen 1 */
   #menü:hover {
     background-color: rgb(223, 223, 223);
   }
-  nav p,
+  #navel,
   nav ul {
     display: none;
   }
@@ -382,6 +396,11 @@ media screen 1 */
   #navel {
     margin-left: 8px;
     margin-right: 8px;
+    margin-top: 8px;
+  }
+  nav ul a {
+    padding: 0;
+    margin: 8px;
   }
 
   nav,
@@ -396,6 +415,62 @@ media screen 1 */
   }
 
   #secOne p {
-    font-size: 1.1em;
+    font-size: 1.4em;
   }
+
+  #a1 {
+    scroll-margin-top: 175px;
+  }
+
+  #a2 {
+    scroll-margin-top: 175px;
+  }
+
+  #a3 {
+    scroll-margin-top: 175px;
+  }
+}
+
+/* Kontakt Seite */
+
+#header-kontakt {
+  background-image: none;
+  color: black;
+  text-shadow: none;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#header-kontakt h1 {
+  font-size: 3em;
+}
+
+#header-kontakt p {
+  font-size: 2em;
+}
+
+#main-kontakt {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+#main-kontakt img {
+  width: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#kontakt-small-note {
+  display: flex;
+  justify-content: center;
+}
+
+#kontakt-nav-ul {
+  margin-right: auto;
+}
+
+#kontakt-nav {
+  justify-content: start;
 }
