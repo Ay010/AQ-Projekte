@@ -9,12 +9,8 @@
 
   <body>
     <h1>Das ist ein JS Test</h1>
-    <h2>
-      In diesem Projekt geht es darum dein alter in Hunde Jahre umzuwandeln
-    </h2>
-    <h3>
-      Es geht hauptsächlich darum das ich das was ich gelernt habe zu verwenden
-    </h3>
+    <h2>In diesem Projekt wird dein Alter in Hundejahre umgerechnet.</h2>
+    <h3>Es geht hauptsächlich darum, dass ich das Gelernte anwende.</h3>
 
     <div>
       <p id="namenText">Bitte schreibe dein Namen unten rein</p>
@@ -48,6 +44,9 @@
 
       let button = document.getElementById("button");
 
+      //namenText.innerHTML = 'Bitte schreibe dein Namen unten rein'
+      //alterText.innerHTML = 'Bitte schreibe dein Alter unten rein'
+
       let okOne = false;
 
       let okTwo = false;
@@ -63,6 +62,7 @@
         switch (true) {
           case myName === "":
             inputNam.style.border = "8px solid red";
+            namenText.innerHTML = "Bitte schreibe dein Namen unten rein";
 
             lb.innerHTML = "Sie müssen ihr Namen eingeben!!";
 
@@ -79,6 +79,7 @@
 
           case myName.length < 3 || myName.length > 9:
             inputNam.style.border = "8px solid red";
+            namenText.innerHTML = "Bitte schreibe dein Namen unten rein";
 
             lb.innerHTML = "Bitte geben sie ein echten Namen ein!!";
 
@@ -113,6 +114,7 @@
         switch (true) {
           case myAge === "" || myAge < 1:
             la.innerHTML = "Sie müssen ihr Alter eingeben!!";
+            alterText.innerHTML = "Bitte schreibe dein Alter unten rein";
 
             inputNum.style.border = "5px solid red";
             la.style.color = "#ff3434";
@@ -126,6 +128,7 @@
 
           case myAge > 95:
             la.innerHTML = "Ihr echtes Alter bitte!!";
+            alterText.innerHTML = "Bitte schreibe dein Alter unten rein";
 
             inputNum.style.border = "5px solid red";
             la.style.color = "#ff3434";

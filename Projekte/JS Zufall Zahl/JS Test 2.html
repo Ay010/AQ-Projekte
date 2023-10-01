@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <h1>Das ist ein JS Test</h1>
+    <h2>In diesem Projekt wird eine zufällige Antwort zurückgegeben.</h2>
+    <h3>Es geht hauptsächlich darum, dass ich das Gelernte anwende.</h3>
 
-<body>
-  <h1>Das ist ein JS Test</h1>
-  <h2>In diesem Projekt geht es darum eine zufällige Antwort zu liefern</h2>
-  <h3>Es geht hauptsächlich darum das ich das was ich gelernt habe zu verwenden</h3>
+    <p>Eine zufällige Antwort</p>
 
-  <p>Eine zufällige Antwort</p>
+    <p id="zufallAntwort"></p>
 
-  <p id="zufallAntwort"></p>
+    <button id="button">Start</button>
 
-  <button id="button">Start</button>
-
-  <script>
-
-    /* if (userName) {
+    <script>
+      /* if (userName) {
       console.log(`Hello, ${userName}!`);
     } else {
       console.log("Hello!");
@@ -30,116 +28,117 @@
     if (userQuestion === "") {
       console.log("Gib deine Frage ein");
     }*/
-    //console.log(userQuestion);
+      //console.log(userQuestion);
 
-    let func = function () {
+      let func = function () {
+        const userQuestion = "nan";
 
-      const userQuestion = "nan";
+        let button = document.getElementById("button");
 
-      let button = document.getElementById('button')
+        let RT = document.getElementById("zufallAntwort");
 
-      let RT = document.getElementById('zufallAntwort')
+        let randomNumber = Math.floor(Math.random() * 8);
 
-      let randomNumber = Math.floor(Math.random() * 8);
+        let eightBall = "";
 
-      let eightBall = "";
+        if (userQuestion) {
+          eightBall = randomNumber;
+        }
 
-      if (userQuestion) {
-        eightBall = randomNumber;
+        switch (eightBall) {
+          case 0:
+            RT.innerHTML = "Antwort 1";
+            break;
+          case 1:
+            RT.innerHTML = "Antwort 2";
+            break;
+          case 2:
+            RT.innerHTML = "Antwort 3";
+            break;
+          case 3:
+            RT.innerHTML = "Antwort 4";
+            break;
+          case 4:
+            RT.innerHTML = "Antwort 5";
+            break;
+          case 5:
+            RT.innerHTML = "Antwort 6";
+            break;
+          case 6:
+            RT.innerHTML = "Antwort 7";
+            break;
+          case 7:
+            RT.innerHTML = "Antwort 8";
+            break;
+        }
+      };
+
+      button.addEventListener("click", func);
+    </script>
+
+    <style>
+      html {
+        font-family: Geneva, Tahoma, sans-serif;
       }
 
-      switch (eightBall) {
-        case 0:
-          RT.innerHTML = "Antwort 1";
-          break;
-        case 1:
-          RT.innerHTML = "Antwort 2";
-          break;
-        case 2:
-          RT.innerHTML = "Antwort 3";
-          break;
-        case 3:
-          RT.innerHTML = "Antwort 4";
-          break;
-        case 4:
-          RT.innerHTML = "Antwort 5";
-          break;
-        case 5:
-          RT.innerHTML = "Antwort 6";
-          break;
-        case 6:
-          RT.innerHTML = "Antwort 7";
-          break;
-        case 7:
-          RT.innerHTML = "Antwort 8";
-          break;
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(126, 218, 255);
+        justify-content: center;
+        align-items: center;
       }
-    }
 
-    button.addEventListener('click', func)
+      p {
+        font-size: 30px;
+      }
 
-  </script>
+      h1 {
+        font-size: 40px;
+        padding: 10px 20px;
+      }
 
-  <style>
-    html {
-      font-family: Geneva, Tahoma, sans-serif;
-    }
+      h2 {
+        font-size: 30px;
+        padding: 5px 80px;
+        text-shadow: 1px 1px 10px black;
+        color: white;
+      }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      background-color: rgb(126, 218, 255);
-      justify-content: center;
-      align-items: center;
-    }
+      h3 {
+        font-size: 25px;
+        padding: 0px 80px;
+        margin: 0;
+        text-shadow: 1px 1px 10px black;
+        color: white;
+      }
 
-    p {
-      font-size: 30px;
-    }
+      button:hover {
+        font-size: 40px;
+        background-position: right;
+      }
 
-    h1 {
-      font-size: 40px;
-      padding: 10px 20px;
-    }
-
-    h2 {
-      font-size: 30px;
-      padding: 5px 80px;
-      text-shadow: 1px 1px 10px black;
-      color: white;
-    }
-
-    h3 {
-      font-size: 25px;
-      padding: 0px 80px;
-      margin: 0;
-      text-shadow: 1px 1px 10px black;
-      color: white;
-
-    }
-
-
-    button:hover {
-      font-size: 40px;
-      background-position: right;
-    }
-
-    button {
-      padding: 15px 90px;
-      margin: 30px;
-      cursor: pointer;
-      transition: 0.5s;
-      font-size: 30px;
-      border: solid white;
-      color: white;
-      text-shadow: 1px 1px 10px black;
-      border-radius: 8px;
-      background-size: 305%;
-      background-position: left;
-      background-image: linear-gradient(71deg, rgba(108, 233, 255, 1) 0%, rgba(72, 136, 255, 1) 15%, rgb(156, 50, 255) 50%, rgb(103, 93, 255) 80%, rgba(108, 233, 255, 1) 100%)
-    }
-  </style>
-
-</body>
-
+      button {
+        padding: 15px 90px;
+        margin: 30px;
+        cursor: pointer;
+        transition: 0.5s;
+        font-size: 30px;
+        border: solid white;
+        color: white;
+        text-shadow: 1px 1px 10px black;
+        border-radius: 8px;
+        background-size: 305%;
+        background-position: left;
+        background-image: linear-gradient(
+          71deg,
+          rgba(108, 233, 255, 1) 0%,
+          rgba(72, 136, 255, 1) 15%,
+          rgb(156, 50, 255) 50%,
+          rgb(103, 93, 255) 80%,
+          rgba(108, 233, 255, 1) 100%
+        );
+      }
+    </style>
+  </body>
 </html>

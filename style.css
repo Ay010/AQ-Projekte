@@ -444,6 +444,8 @@ media screen 1 */
 
 #header-kontakt h1 {
   font-size: 3em;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 #header-kontakt p {
@@ -467,10 +469,20 @@ media screen 1 */
   justify-content: center;
 }
 
-#kontakt-nav-ul {
+/* .kontakt-nav-ul {
   margin-right: auto;
-}
+} */
 
 #kontakt-nav {
   justify-content: start;
+}
+
+@media screen and (max-width: 600px) {
+  #header-kontakt h1 {
+    font-size: 1.5em;
+  }
+
+  #header-kontakt p {
+    font-size: 1.5em;
+  }
 }
