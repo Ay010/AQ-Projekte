@@ -1,179 +1,158 @@
-@media screen {
+/* Ellemente visoel vertecken, aber vür Screendreder zugänglich lassen  */
 
+.verstecke-text {
+  position: absolute;
 
-  /* Ellemente visoel vertecken, aber vür Screendreder zugänglich lassen  */
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
 
-  .verstecke-text {
-    position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
 
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    margin: -1px;
+/* vermeidung von marging blabla */
 
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    white-space: nowrap;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol.ul,
+blockquote {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
 
+/* borde box */
 
-  /* vermeidung von marging blabla */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ol.ul,
-  blockquote {
-    margin-top: 0;
-    margin-bottom: 1em;
-  }
+  /* -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%; */
+}
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
+header,
+nav,
+main,
+footer,
+section,
+article,
+aside,
+figcaption,
+figure {
+  display: block;
+}
 
-  /* borde box */
+/* Überschriften */
 
-  html {
-    box-sizing: border-box;
-    overflow-y: scroll;
+h1 {
+  font-size: 2.5rem;
+}
 
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
+h2 {
+  font-size: 2rem;
+}
 
+h3 {
+  font-size: 1.75rem;
+}
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+h4 {
+  font-size: 1.5rem;
+}
 
+/* Umgebende Elemente sollen gefloatete Elemente umschließen */
 
-  header,
-  nav,
-  main,
-  footer,
-  section,
-  article,
-  aside,
-  figcaption,
-  figure {
-    display: block;
-  }
+.clear-overflow {
+  overflow: hidden;
+}
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  /* Überschriften */
+.clear-flow-root {
+  display: flow-root;
+}
 
-  h1 {
-    font-size: 2.5rem;
-  }
+/* Element soll unterhalb gefloateten Elemente bleiben */
 
-  h2 {
-    font-size: 2rem;
-  }
+.clear-both {
+  clear: both;
+}
 
-  h3 {
-    font-size: 1.75rem;
-  }
+/* text schrift */
 
-  h4 {
-    font-size: 1.5rem;
-  }
+body {
+  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 1rem;
+}
 
+/* Grundlegende Gestaltung Adresse*/
 
+adress {
+  font-style: normal;
+}
 
-  /* Umgebende Elemente sollen gefloatete Elemente umschließen */
+/* figure ohne margin und Bildbeschriftung gestalten */
 
-  .clear-overflow {
-    overflow: hidden;
-  }
+.figure {
+  padding: 0;
+  margin: 0;
+}
 
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.figcaption {
+  text-align: center;
+  font-size: 80%;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
 
-  .clear-flow-root {
-    display: flow-root;
-  }
+/* Bilder Floaten */
 
-  /* Element soll unterhalb gefloateten Elemente bleiben */
+.bildrechts {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
 
-  .clear-both {
-    clear: both
-  }
+.bildlinks {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
 
+/* span für CSS,Javascript und HTML */
 
+.HTML {
+  color: darkgoldenrod;
+}
 
+.CSS {
+  color: darkgoldenrod;
+}
 
-  /* text schrift */
-
-  body {
-    font-family: sans-serif;
-    font-family: Helvetica, Arial, sans-serif;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-    font-size: 1rem;
-  }
-
-
-
-  /* Grunlegende Gestaltung Adresse*/
-
-  adress {
-    font-style: normal;
-  }
-
-
-  /* figure ohne margin und Bildbeschriftung gestalten */
-
-  .figure {
-    padding: 0;
-    margin: 0;
-  }
-
-  .figcaption {
-    text-align: center;
-    font-size: 80%;
-    font-style: italic;
-    padding: 0;
-    margin: 0;
-  }
-
-
-  /* Blider Floaten */
-
-  .bildrechts {
-    float: right;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .bildlinks {
-    float: left;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  /* span für CSS,Javascript und HTML */
-
-  .HTML {
-    color: darkgoldenrod;
-  }
-
-  .CSS {
-    color: darkgoldenrod;
-  }
-
-  .Javascript {
-    color: darkgoldenrod;
-  }
-
-
+.Javascript {
+  color: darkgoldenrod;
 }
 
 /* Ende @media */

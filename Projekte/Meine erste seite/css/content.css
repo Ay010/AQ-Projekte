@@ -1,174 +1,150 @@
 @media screen {
-  
-  
   /* für die links */
 
-.site-content a:link{
-  color:mediumblue ;
-}
+  .site-content a:link {
+    color: mediumblue;
+  }
 
-.site-content a:visited {
-  color:#0b74b8 ;
-}
+  .site-content a:visited {
+    color: #0b74b8;
+  }
 
-.site-content a:hover,
-.site-content a:focus {
-  color: #f5662e;
- ;
-}
+  .site-content a:hover,
+  .site-content a:focus {
+    color: #f5662e;
+  }
 
-.site-content a:active {
-  color: #c12d2d ;
-}
-  
-  
-.site-content a[href^="http"]::after {
+  .site-content a:active {
+    color: #c12d2d;
+  }
+
+  .site-content a[href^="http"]::after {
     content: " \29C9 ";
-  }  
-  
+  }
 
-
-  
   /*infobox */
 
-.infoboxen {
-  background-color: #eee;
-  padding: 1rem 0;
-  margin-bottom: 1rem;
-}
-
-.infobox {
-	text-align: center;
-	background-color: white;
-	padding: 1rem;
-	margin: 1rem 0;
-  
-	display: flex;
-	flex-flow: column;
-}
-  
-/* Hyperlinks am unteren Rand der Infobox platzieren */  
-.infobox p:last-child {
-  margin-top: auto;
-}
-  
-  /* Infoboxen nebeneinander per Grid */
-  
-  @media screen and (min-width: 768px) {
-
-        .infoboxen > .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
-      }/* Ende @media */
+  .infoboxen {
+    background-color: #eee;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
   }
-  
 
-/*Gestaltung der Kundenstimme*/
-  
+  .infobox {
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    display: flex;
+    flex-flow: column;
+  }
+
+  /* Hyperlinks am unteren Rand der Infobox platzieren */
+  .infobox p:last-child {
+    margin-top: auto;
+  }
+
+  /* Infoboxen nebeneinander per Grid */
+
+  @media screen and (min-width: 768px) {
+    .infoboxen > .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem;
+    } /* Ende @media */
+  }
+
+  /*Gestaltung der Kundenstimme*/
 
   .kundenstimme {
-	background-color: #eee;
-	text-align: center;
-	padding: 1em;
-	margin: 0 0 1em 0;
-	border-left: 5px solid #0b74b8;
+    background-color: #eee;
+    text-align: center;
+    padding: 1em;
+    margin: 0 0 1em 0;
+    border-left: 5px solid #0b74b8;
     /*
 	border-radius: 0 10rem 10rem 0;
     */
-}
-  
-*/  
+  }
 
-.kundenstimme {
-	background-color: #eee;
-	text-align: center;
-	padding: 1em;
-	margin: 0 0 1em 0;
-	border-left: 5px solid #0b74b8;
-}
-  
-  
+  */ .kundenstimme {
+    background-color: #eee;
+    text-align: center;
+    padding: 1em;
+    margin: 0 0 1em 0;
+    border-left: 5px solid #0b74b8;
+  }
+
   /*   Seite "News"
    *
    *
    *   Grundgestaltung der Beiträge und Linklisten */
-  
+
   .news h3 {
     padding-top: 0.5rem;
     border-top: 1px solid #eee;
     margin-bottom: 0.25rem;
   }
-  
+
   .beitragsliste h3 a {
     color: #333;
   }
-  
+
   .beitragsliste article {
     margin-bottom: 4rem;
   }
-  
+
   .beitragsinfo {
     color: #999;
   }
-  
-  
-  
+
   /* Kontaktdaten */
-  
+
   .kontaktdaten {
-     background: #eee;
-	 padding: 1rem;
-     margin-bottom: 1rem;
-}
-  
-  
+    background: #eee;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
   /* Seite "Über uns"
    *
    * Vorstellung des Teams
    *
    */
-  
+
   .mitglieder {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 1rem;
-    
+
     list-style: none;
     padding: 0;
     margin: 0 0 1rem 0;
   }
-  
+
   .mitglied {
     text-align: center;
-    
+
     border: 1px solid #999;
     border-radius: 3px;
     padding: 0.5rem;
     /*margin-bottom: 1rem;*/
   }
-  
-  
+
   .mitglied h4 {
     line-height: 1;
     color: #fff;
     background-color: #0b74b8;
-    
+
     padding: 1rem;
     /* der negative margin zieht die überschrift an den Rand */
-    margin:  -0.5rem -0.5rem 2rem -0.5rem;
+    margin: -0.5rem -0.5rem 2rem -0.5rem;
   }
-  
+
   .mitglied > i.fas {
     display: block;
     color: #999;
     margin-bottom: 1rem;
   }
-
-  
-  
-  
-  
-  
-  
 } /* Ende @media */
