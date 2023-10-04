@@ -12,7 +12,7 @@
     <h2>In diesem Projekt wird dein Alter in Hundejahre umgerechnet.</h2>
     <h3>Es geht hauptsächlich darum, dass ich das Gelernte anwende.</h3>
 
-    <div>
+    <div id="divOne">
       <p id="namenText">Bitte schreibe dein Namen unten rein</p>
       <p id="alterText">Bitte schreibe dein Alter unten rein</p>
     </div>
@@ -219,6 +219,25 @@
       @media screen and (max-width: 900px) {
         #imput-div {
           flex-direction: column;
+        }
+
+        #namenText,
+        #alterText {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media screen and (max-width: 430px) {
+        #divOne {
+          margin-left: 3%;
+          margin-right: 3%;
+        }
+
+        body h2,
+        body h3,
+        body h1 {
+          margin: 30px 5px;
+          padding: 10px;
         }
       }
 
