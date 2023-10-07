@@ -61,10 +61,12 @@
         // Der Name muss richtig sein
         switch (true) {
           case myName === "":
+            okOne = false;
+
             inputNam.style.border = "8px solid red";
             namenText.innerHTML = "Bitte schreibe dein Namen unten rein";
 
-            lb.innerHTML = "Sie müssen ihr Namen eingeben!!";
+            lb.innerHTML = "Du musst dein Namen eingeben!!";
 
             inputNam.style.border = "5px solid red";
             lb.style.color = "#ff3434";
@@ -78,10 +80,12 @@
             break;
 
           case myName.length < 3 || myName.length > 9:
+            okOne = false;
+
             inputNam.style.border = "8px solid red";
             namenText.innerHTML = "Bitte schreibe dein Namen unten rein";
 
-            lb.innerHTML = "Bitte geben sie ein echten Namen ein!!";
+            lb.innerHTML = "Bitte gib ein echten Namen ein!!";
 
             inputNam.style.border = "5px solid red";
             lb.style.color = "#ff3434";
@@ -113,7 +117,9 @@
         // Das Alter muss richtig sein
         switch (true) {
           case myAge === "" || myAge < 1:
-            la.innerHTML = "Sie müssen ihr Alter eingeben!!";
+            okTwo = false;
+
+            la.innerHTML = "Du musst dein Alter eingeben!!";
             alterText.innerHTML = "Bitte schreibe dein Alter unten rein";
 
             inputNum.style.border = "5px solid red";
@@ -127,7 +133,9 @@
             break;
 
           case myAge > 95:
-            la.innerHTML = "Ihr echtes Alter bitte!!";
+            okTwo = false;
+
+            la.innerHTML = "dein echtes Alter bitte!!";
             alterText.innerHTML = "Bitte schreibe dein Alter unten rein";
 
             inputNum.style.border = "5px solid red";
@@ -172,7 +180,7 @@
           alterText.innerHTML =
             "Ich bin " +
             myAge +
-            " Jahre alt.  Das wehre in Hund Jahren " +
+            " Jahre alt.  Das wäre in Hund Jahren " +
             myAgeInDogYears +
             " Jahre.";
         }
