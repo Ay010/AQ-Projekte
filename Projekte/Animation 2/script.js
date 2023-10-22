@@ -1,15 +1,19 @@
-let start = document.getElementById("Test");
-
-start.addEventListener("click", () => {
-  document.getElementById("Test").classList.add("jsc");
-});
 
 let re = document.getElementById("button");
 
-// re.addEventListener("click", () => {
-//   document.getElementById("Test").classList.remove("jsc").classList.add("zu");
-// });
-
 re.addEventListener("click", () => {
-  document.getElementById("Test").classList.remove("jsc");
+
+  let el = document.getElementById("Test");
+
+  let i = 0
+
+   if(el.classList.contains('jsc')) {
+    el.classList.remove('jsc');
+  } else {
+    el.classList.add("jsc");
+  }
+
+  //  if(el.className.contains('')) {
+  //  }
+
 });
