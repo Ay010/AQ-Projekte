@@ -32,14 +32,16 @@ navel.addEventListener('click', () => {
 
 let pfeil = document.querySelectorAll('.pfeil');
 
-let  pImg = document.querySelectorAll('.p-img');
+// let  pImg = document.querySelectorAll('.p-img');
+
+let projektItemContent = document.querySelectorAll('.projekt-item')
 
 let gridBeschreibung = document.querySelectorAll('.grid-beschreibung');
 
 
 for(let i = 0; i < pfeil.length; i++ ) {
 
-pImg[i].addEventListener('mouseover', () => {
+    projektItemContent[i].addEventListener('mouseover', () => {
     pfeil[i].style.transition = '0.5s'
     pfeil[i].style.transform = 'rotate(0)'
     gridBeschreibung[i].style.gridTemplateRows = '1fr'
@@ -47,7 +49,7 @@ pImg[i].addEventListener('mouseover', () => {
 }
 
 for(let i = 0; i < pfeil.length; i++ ) {
-pImg[i].addEventListener('mouseout', () => {
+    projektItemContent[i].addEventListener('mouseout', () => {
     pfeil[i].style.transition = '0.5s'
     pfeil[i].style.transform = 'rotate(-90deg)'
     gridBeschreibung[i].style.gridTemplateRows = '0fr'

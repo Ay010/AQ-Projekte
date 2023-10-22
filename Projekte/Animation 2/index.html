@@ -8,11 +8,11 @@
   </head>
 
   <body>
-    <div id="Test">
-      <h1>Start</h1>
+    <div id="Test" class="">
+      <h1>._.</h1>
     </div>
 
-    <button id="button">Nochmal</button>
+    <button id="button">Start</button>
 
     <script src="script.js" defer></script>
   </body>
@@ -53,6 +53,11 @@
       background-color 1s ease;
   }
 
+  #Test h1 {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+
   .zu {
     width: 200px;
     height: 200px;
@@ -66,7 +71,7 @@
   }
 
   #Test:hover {
-    background-color: rgb(96, 142, 211);
+    /* background-color: rgb(96, 142, 211); */
     box-shadow: 10px 10px 10px black;
   }
 
@@ -74,6 +79,10 @@
     #Test {
       height: 100px;
       width: 300px;
+    }
+    #Test h1 {
+      margin-bottom: 80px;
+      font-size: 60px;
     }
 
     @keyframes eins {
@@ -137,7 +146,7 @@
     #Test {
       height: 60px;
       width: 150px;
-      font-size: 0.8em;
+      font-size: 1rem;
     }
 
     @keyframes eins {
