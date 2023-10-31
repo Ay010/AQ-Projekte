@@ -230,26 +230,33 @@ main section {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  background-color: rgb(216, 251, 255);
   border: 1px solid black;
+
+  background-color: rgb(240, 240, 240);
+}
+
+.projekt-item:hover {
+  background-color: rgb(218, 218, 218);
+
+  transition: 0.5s;
+  box-shadow: 5px 5px 10px rgb(187, 187, 187);
 }
 
 #projekt-ul div h3 {
   margin-top: 50px;
   font-size: 25px;
-  /* text-decoration: underline; */
-  transition: 0.3s background-color;
-  background-color: rgb(61, 164, 255);
+  text-decoration: underline;
   padding: 10px;
 
-  color: white;
+  border-radius: 5px;
 
-  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(119, 119, 119);
 }
 
 #projekt-ul div h3:hover {
-  background-color: rgb(64, 131, 255);
+  transition: 0.3s;
+  background-color: rgb(85, 85, 85);
 }
 
 #projekt-ul > div > p {
@@ -323,7 +330,7 @@ main section {
 .aktiv-info {
   padding: 13px;
   margin-top: 0;
-  border: solid 3px rgb(0, 0, 0);
+  border: solid 2px rgb(87, 87, 87);
   background-color: rgb(241, 241, 241);
   border-radius: 5px;
   color: rgb(0, 0, 0);

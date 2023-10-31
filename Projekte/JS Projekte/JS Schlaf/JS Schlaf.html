@@ -90,7 +90,7 @@
         };
 
         const getIdealSleepHours = () => {
-          const idealHours = 7.5;
+          const idealHours = 8;
           return idealHours * 7;
         };
 
@@ -125,20 +125,24 @@
             soVal > -1
           ) {
             if (actualSleepHours === idealSleepHours) {
+              txt.style.display = "block";
               txt.innerHTML =
                 "Du schläfst genau so viel, wie du brauchst. Das ist optimal für deine Gesundheit und dein Wohlbefinden.";
             } else if (actualSleepHours < idealSleepHours) {
+              txt.style.display = "block";
               txt.innerHTML =
                 "Du schläfst " +
                 (idealSleepHours - actualSleepHours) +
                 " Stunden zu wenig. Du solltest mehr schlafen, um deine Gesundheit zu erhalten.";
             } else if (actualSleepHours > idealSleepHours) {
+              txt.style.display = "block";
               txt.innerHTML =
                 "Du schläfst " +
                 (actualSleepHours - idealSleepHours) +
                 " Stunden. Das ist mehr als die meisten Menschen brauchen. Du solltest versuchen, etwas früher aufzustehen, um deine Gesundheit zu erhalten.";
             }
           } else {
+            txt.style.display = "block";
             txt.innerHTML =
               "Die Anzahl der Stunden muss zwischen 0 und 24 liegen.";
           }
@@ -222,10 +226,15 @@
       #the-txt {
         margin: 30px;
 
+        display: none;
+
         text-shadow: 1px 1px 15px rgb(0, 0, 0);
         color: #ffffff;
         font-size: 25px;
         font-weight: 400;
+        background-color: rgb(117, 0, 128);
+        border-radius: 10px;
+        padding: 30px;
       }
 
       #button {

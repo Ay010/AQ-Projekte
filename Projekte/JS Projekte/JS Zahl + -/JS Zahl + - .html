@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="divOne">
+      <h1 id="number">0</h1>
+      <div id="divTwo">
+        <button id="min">-</button>
+        <button id="max">+</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const min = document.getElementById("min");
+    const max = document.getElementById("max");
+    const number = document.getElementById("number");
+
+    let num = 0;
+
+    max.addEventListener("click", plus);
+    min.addEventListener("click", minus);
+
+    function plus() {
+      num++;
+      number.innerHTML = num;
+    }
+
+    function minus() {
+      if (num > 0) {
+        num--;
+        number.innerHTML = num;
+      }
+    }
+  </script>
+
+  <style>
+    h1 {
+      margin: 0;
+    }
+
+    body {
+      user-select: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 90vh;
+      margin: 0;
+
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+
+      background-color: rgb(0, 114, 114);
+    }
+
+    #divOne {
+      width: 40vh;
+      height: 25vh;
+
+      margin: 10px;
+      border-radius: 40px;
+
+      background-color: white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      box-shadow: 3px 3px 10px;
+    }
+
+    #divTwo {
+      flex-direction: row;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      /* width: 8vh;
+      height: 3vh; */
+
+      padding: 5px 35px;
+      margin: 25px 10px 0px;
+
+      border-radius: 40px;
+      border: 0;
+      font-size: 25px;
+
+      color: white;
+      background-color: rgb(68, 149, 255);
+
+      box-shadow: 0px 0px 0px;
+      transition: 0.5s;
+    }
+
+    button:hover {
+      background-color: rgb(10, 116, 255);
+      box-shadow: 0px 0px 10px -1px rgb(68, 149, 255);
+    }
+  </style>
+</html>

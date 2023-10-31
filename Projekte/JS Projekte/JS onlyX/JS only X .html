@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Gib was ein</h1>
+
+    <h2 id="the-txt"></h2>
+
+    <input type="text" id="input" />
+
+    <button id="button">Start</button>
+
+    <script>
+      let input = document.getElementById("input");
+
+      let theTxt = document.getElementById("the-txt");
+
+      let button = document.getElementById("button");
+
+      button.addEventListener("click", onlyX);
+
+      function onlyX() {
+        const vowels = ["a", "e", "i", "o", "u"];
+
+        let resultArray = [];
+
+        for (let i = 0; i < input.length; i++) {
+          if (input[i] === "e") {
+            resultArray.push(input[i]);
+          }
+
+          if (input[i] === "u") {
+            resultArray.push(input[i]);
+          }
+
+          for (let j = 0; j < vowels.length; j++) {
+            if (input[i] === vowels[j]) {
+              resultArray.push(input[i]);
+            }
+          }
+        }
+
+        const resultString = resultArray.join("").toUpperCase();
+
+        theTxt.innerHTML = resultArray.join("").toUpperCase();
+      }
+    </script>
+
+    <style>
+      html {
+        font-family: Geneva, Tahoma, sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(184, 255, 237);
+        background-color: rgb(0, 0, 146);
+      }
+
+      p {
+        font-size: 30px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+    </style>
+  </body>
+</html>

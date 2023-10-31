@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 35px;
+}
+
+header {
+  height: 30vh;
+  background-color: rgb(50, 50, 50);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 30px;
+  font-size: 50px;
+  flex-direction: column;
+}
+
+table {
+  background-color: rgb(40, 40, 40);
+  box-sizing: border-box;
+
+  height: 70vh;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+  width: 25%;
+  border: 0.5px rgb(50, 50, 50) solid;
+}
+
+td:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+#result {
+  background-color: rgb(71, 58, 255);
+}
+
+#result:hover {
+  background-color: rgb(104, 114, 255);
+}
