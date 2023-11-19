@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ghosts-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(1em);
+  }
+
+  to {
+    transform: translateY(-1em);
+  }
+}
+
+/* input */
+
+.ghost-input {
+  padding: 1em;
+
+  font-size: 20px;
+
+  border-style: none;
+
+  background-color: rgb(107, 107, 107);
+  color: rgb(54, 54, 54);
+
+  border-radius: 0.2em;
+  font-weight: 700;
+
+  transition: 0.3s background-color;
+
+  z-index: 1;
+}
+
+.ghost-input:focus {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  outline: 0;
+  border: 0;
+}
+
+.ghost-input::placeholder {
+  color: rgb(56, 56, 56);
+
+  font-weight: 600;
+}
+
+/* Ghost */
+
+.ghost {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  background-color: white;
+  color: white;
+}
+
+.ghost * {
+  transition: all 0.3;
+}
+
+.ghost > * {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+}
+
+.body {
+  width: 5em;
+  height: 7em;
+
+  background-color: inherit;
+
+  border-radius: 100px;
+  box-shadow: 0 0 12px gray;
+
+  transform: translate(-50%, 50px);
+  z-index: -1;
+}
+
+.face {
+  margin-bottom: 1em;
+  background: none;
+}
+
+.left-eye,
+.right-eye {
+  width: 0.8em;
+  height: 0.8em;
+
+  border-radius: 100%;
+
+  background-color: black;
+  position: absolute;
+  bottom: 0.4rem;
+}
+
+.right-eye {
+  right: 1em;
+}
+
+.left-eye {
+  left: 1em;
+}
+
+.face .mouth {
+  width: 0.5em;
+  height: 0.3em;
+  border-radius: 50px;
+  border: 0.2em solid #333;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.hand {
+  color: inherit;
+}
+
+.left-hand,
+.right-hand {
+  width: 1em;
+  height: 1.5em;
+  border-radius: 100px;
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(51, 51, 51, 0.3);
+}
+
+.left-hand {
+  transform: translate(-1.5em, 2.5em) rotate(-15deg);
+}
+
+.right-hand {
+  transform: translate(1.5em, 1em) rotate(15deg);
+}

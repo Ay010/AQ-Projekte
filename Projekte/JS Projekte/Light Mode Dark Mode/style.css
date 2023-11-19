@@ -1,0 +1,132 @@
+body {
+  --background-button-text-color: white;
+  --button-icon-color: rgb(255, 102, 0);
+  --text-color: black;
+
+  --transition-delay: 1s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: "Poppins", sans-serif;
+
+  background-color: var(--background-button-text-color);
+
+  height: 100vh;
+  margin: 0;
+
+  user-select: none;
+
+  overflow: hidden;
+
+  transition: var(--transition-delay) ease-in-out;
+}
+
+body.dark {
+  --background-button-text-color: #333;
+  --button-icon-color: rgb(214, 226, 43);
+  --text-color: white;
+}
+
+h1 {
+  transition: var(--transition-delay) ease-in-out;
+
+  margin-bottom: 1em;
+
+  font-size: 35px;
+  color: var(--text-color);
+}
+
+/* Button */
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--button-icon-color);
+  color: var(--background-button-text-color);
+
+  padding: 0.5em 1em;
+
+  border: 0;
+  border-radius: 0.5em;
+
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+
+  outline: none;
+
+  transition: transform 0.6s ease-in-out,
+    background-color var(--transition-delay) ease-in-out,
+    color var(--transition-delay) ease-in-out;
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.1);
+}
+
+button .icon {
+  fill: var(--background-button-text-color);
+
+  margin-right: 1em;
+  height: 50px;
+  width: 50px;
+
+  transition: fill var(--transition-delay) ease-in-out;
+}
+
+/* Sun Moon */
+
+.sun-moon-content {
+  --rotation: 0;
+
+  position: absolute;
+  top: 0;
+
+  height: 200vh;
+
+  transform: rotate(calc(var(--rotation) * 1deg));
+
+  transition: transform var(--transition-delay) ease-in-out;
+}
+
+.sun,
+.moon {
+  position: absolute;
+
+  height: 70px;
+  width: 70px;
+
+  fill: var(--button-icon-color);
+
+  transition: opacity var(--transition-delay) ease-in-out,
+    fill var(--transition-delay) ease-in-out;
+}
+
+/* sun */
+.sun {
+  top: 5%;
+  opacity: 1;
+
+  transform: translate(-50%, -50%);
+}
+
+.dark .sun {
+  opacity: 0;
+}
+
+/* moon */
+.moon {
+  transform: rotate(180deg) translate(50%, -50%);
+
+  bottom: 5%;
+  opacity: 0;
+}
+
+.dark .moon {
+  opacity: 1;
+}
